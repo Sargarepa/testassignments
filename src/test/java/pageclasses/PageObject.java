@@ -3,7 +3,7 @@ package pageclasses;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class PageObject {
+public abstract class PageObject {
 	
 	protected WebDriver driver;
 	
@@ -11,5 +11,7 @@ public class PageObject {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	public abstract boolean isInitialized();
 	
 }
