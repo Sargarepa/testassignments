@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.matija.testassignments.Test2
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.658 s <<< FAILURE! - in com.matija.testassignments.Test2
+test2(com.matija.testassignments.Test2)  Time elapsed: 2.08 s  <<< FAILURE!
+java.lang.AssertionError: There is too much cheese on the internet
+	at com.matija.testassignments.Test2.test2(Test2.java:22)
+

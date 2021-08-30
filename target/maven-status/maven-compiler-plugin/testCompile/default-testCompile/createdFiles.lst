@@ -1,0 +1,16 @@
+pageclasses\OrangeHRMLoginPage.class
+com\matija\testassignments\AssignmentTestSuite.class
+com\matija\testassignments\Test.class
+utils\Utils.class
+pageclasses\GoogleResultsPage.class
+pageclasses\DemoQAInteractionsPage.class
+utils\ScreenshotTaker.class
+com\matija\testassignments\Test1.class
+pageclasses\OrangeHRMCandidatesPage.class
+pageclasses\OrangeHRMDashboardPage.class
+pageclasses\PageObject.class
+com\matija\testassignments\Test2.class
+pageclasses\DemoQAHomePage.class
+com\matija\testassignments\FunctionalTest.class
+com\matija\testassignments\Test3.class
+pageclasses\GoogleHomePage.class
