@@ -37,6 +37,7 @@ public class DemoQAInteractionsPage extends PageObject {
 	
 	public DemoQAInteractionsPage(WebDriver driver) {
 		super(driver);
+		log.info("At page: " + driver.getCurrentUrl());
 	}
 	
 	//Droppable button is not clickable because div[@id='fixedban'] obscures it so we click it using JavascriptExecutor

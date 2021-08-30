@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.matija.testassignments.Test3
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.672 s - in com.matija.testassignments.Test3
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.472 s - in com.matija.testassignments.Test3

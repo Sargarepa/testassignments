@@ -73,6 +73,7 @@ public class OrangeHRMCandidatesPage extends PageObject {
 	
 	public OrangeHRMCandidatesPage(WebDriver driver) {
 		super(driver);
+		log.info("At page: " + driver.getCurrentUrl());
 	}
 	
 	//Most of the elements needed are in 'noncoreIframe' iframe
