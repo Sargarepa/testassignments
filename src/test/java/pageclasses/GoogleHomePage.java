@@ -12,13 +12,7 @@ public class GoogleHomePage extends PageObject {
 	private WebElement search;
 
 	public GoogleHomePage(WebDriver driver) {
-		
 		super(driver);
-	}
-	
-	@Override
-	public boolean isInitialized() {
-		return search.isDisplayed();
 	}
 	
 	//Enter query into search box

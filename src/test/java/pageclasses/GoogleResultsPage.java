@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class GoogleResultsPage extends PageObject {
 	
@@ -20,20 +21,21 @@ public class GoogleResultsPage extends PageObject {
 		super(driver);
 	}
 
-	@Override
-	public boolean isInitialized() {
-		return firstResult.isDisplayed();
-	}
-	
-	//Selects first result after google searching for 'demoqa' and returns a DemoQAHomePage object, there has to be a way to make this more generic for different google searches
 	public DemoQAHomePage selectFirstResult() {
+		wait.until(ExpectedConditions.visibilityOf(firstResult));
 		firstResult.click();
 		return new DemoQAHomePage(driver);
 	}
 	
 	public int numberOfSearchResults() {
+		//Wait for result stats to be visible
+		wait.until(ExpectedConditions.visibilityOf(resultStats));
+		
+		//Find result stats text
 		String resultStatsText = resultStats.getText();
 		log.info("Result Stats Text = " + resultStatsText);
+		
+		//Extract number from result stats as a String
 		String numberOfResultsString = resultStatsText.split(" ")[1].replace(".", "");
 		int numberOfResults = Integer.parseInt(numberOfResultsString);
 		log.info("Number of search results = " + numberOfResults);

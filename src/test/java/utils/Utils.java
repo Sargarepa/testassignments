@@ -1,5 +1,8 @@
 package utils;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Utils {
 
 	public static String getRandomString(int length) {
@@ -13,4 +16,9 @@ public class Utils {
 		return sb.toString();
 	}
 	
+	public static String getCurrentDate() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		String date = formatter.format(new Date());
+		return date;
+	}
 }

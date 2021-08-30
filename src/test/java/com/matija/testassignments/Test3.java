@@ -36,7 +36,7 @@ public class Test3 extends FunctionalTest {
 		candidatesPage.clickOnAddItemButton();
 		
 		//Add candidate
-		String resumePath = System.getProperty("user.dir") + "\\resources\\Matija Vorkapic - CV.pdf";
+		String resumePath = System.getProperty("user.dir") + "\\resources\\CV.txt";
 		candidatesPage.addResume(resumePath);
 		candidatesPage.enterFirstName("QA Automation");
 		candidatesPage.enterLastName(Utils.getCurrentDate());

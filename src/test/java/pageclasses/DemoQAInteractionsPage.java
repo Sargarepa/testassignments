@@ -1,12 +1,14 @@
 package pageclasses;
 
 import org.apache.logging.log4j.LogManager;
+
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class DemoQAInteractionsPage extends PageObject {
 	
@@ -37,11 +39,6 @@ public class DemoQAInteractionsPage extends PageObject {
 		super(driver);
 	}
 	
-	@Override
-	public boolean isInitialized() {
-		return droppableButton.isDisplayed();
-	}
-	
 	//Droppable button is not clickable because div[@id='fixedban'] obscures it so we click it using JavascriptExecutor
 	//Same goes for other buttons
 	public void clickDroppableButton() {
@@ -66,6 +63,7 @@ public class DemoQAInteractionsPage extends PageObject {
 	
 	//For some reason getText() doesn't work on tool tip so we extract it using getAttribute("textContent")
 	public void logToolTipText() {
+		wait.until(ExpectedConditions.visibilityOf(textFieldToolTipText));
 		String toolTipText = textFieldToolTipText.getAttribute("textContent");
 		log.info("Tooltip text = " + toolTipText);
 	}

@@ -14,10 +14,8 @@ public class Test2 extends FunctionalTest {
 		driver.get("https://www.google.com/");
 		
 		GoogleHomePage googleHomePage = new GoogleHomePage(driver);
-		assertTrue(googleHomePage.isInitialized());
 		
 		GoogleResultsPage googleResultsPage = googleHomePage.searchAndSubmit("cheese");
-		assertTrue(googleResultsPage.isInitialized());
 		
 		int numberOfSearchResults = googleResultsPage.numberOfSearchResults();
 		

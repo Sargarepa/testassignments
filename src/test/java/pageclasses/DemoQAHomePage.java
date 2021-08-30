@@ -13,11 +13,6 @@ public class DemoQAHomePage extends PageObject {
 		super(driver);
 	}
 	
-	@Override
-	public boolean isInitialized() {
-		return interactions.isDisplayed();
-	}
-	
 	public DemoQAInteractionsPage clickOnInteractions() {
 		interactions.click();
 		return new DemoQAInteractionsPage(driver);

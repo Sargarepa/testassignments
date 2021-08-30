@@ -85,8 +85,7 @@ public class OrangeHRMCandidatesPage extends PageObject {
 		driver.switchTo().defaultContent();
 	}
 
-	//Waits for preloader to disappear before calculating number of candidates in case we just added or deleted a candidate from the list
-	//For whatever reason this doesn't work with a preloader WebElement defined with a @FindBy notation
+	//Wait for list to be displayed and for toast to disappear before calculating number of candidates
 	public int numberOfCandidates() {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='row content']")));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("toast-container")));
@@ -147,6 +146,7 @@ public class OrangeHRMCandidatesPage extends PageObject {
 		deleteButton.click();
 	}
 	
+	//Select confirm dialogue option and wait for toast to appear
 	public void confirmDelete() throws InterruptedException {
 		wait.until(ExpectedConditions.visibilityOf(deleteDialogueBox));
 		confirmDeleteButton.click();
